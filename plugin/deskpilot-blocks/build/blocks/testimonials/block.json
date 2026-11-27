@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "deskpilot/testimonials",
+  "version": "1.0.0",
+  "title": "DeskPilot Testimonials",
+  "category": "design",
+  "icon": "chart-bar",
+  "description": "A customizable testimonials section for DeskPilot.",
+  "textdomain": "deskpilot",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Trusted by Growing Teams"
+    },
+    "description": {
+      "type": "string",
+      "default": "Helping businesses deliver better customer support."
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "testimonials": {
+      "type": "array",
+      "default": [
+        {
+          "quote": "DeskPilot has made managing customer conversations so much easier. Our team can finally focus on helping customers.",
+          "name": "Sarah Johnson",
+          "role": "Customer Success Manager",
+          "rating": 5,
+          "initials": "SJ"
+        },
+        {
+          "quote": "The simple interface and organized ticket workflow have made a real difference to our daily support operations.",
+          "name": "Michael Chen",
+          "role": "Operations Lead",
+          "rating": 5,
+          "initials": "MC"
+        },
+        {
+          "quote": "A clean, practical solution for teams that want to deliver better customer support without unnecessary complexity.",
+          "name": "Emily Davis",
+          "role": "Support Team Lead",
+          "rating": 5,
+          "initials": "ED"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:../../index.js",
+  "style": "file:../../style-index.css",
+  "editorStyle": "file:../../style-index.css"
+}

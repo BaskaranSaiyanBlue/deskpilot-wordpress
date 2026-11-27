@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "deskpilot/stats",
+  "version": "1.0.0",
+  "title": "DeskPilot Stats",
+  "category": "design",
+  "icon": "chart-bar",
+  "description": "A customizable statistics section for DeskPilot.",
+  "textdomain": "deskpilot",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Trusted by Growing Teams"
+    },
+    "description": {
+      "type": "string",
+      "default": "Helping businesses deliver better customer support."
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    },
+    "stats": {
+      "type": "array",
+      "default": [
+        {
+          "number": "10K+",
+          "label": "Tickets Resolved"
+        },
+        {
+          "number": "98%",
+          "label": "Customer Satisfaction"
+        },
+        {
+          "number": "24/7",
+          "label": "Support Availability"
+        },
+        {
+          "number": "50+",
+          "label": "Growing Teams"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:../../index.js",
+  "style": "file:../../style-index.css",
+  "editorStyle": "file:../../style-index.css"
+}

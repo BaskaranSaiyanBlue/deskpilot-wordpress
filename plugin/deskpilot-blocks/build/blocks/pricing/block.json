@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "deskpilot/pricing",
+  "version": "1.0.0",
+  "title": "DeskPilot Pricing",
+  "category": "design",
+  "icon": "money",
+  "description": "A customizable pricing section for DeskPilot.",
+  "textdomain": "deskpilot",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Simple, Transparent Pricing"
+    },
+    "description": {
+      "type": "string",
+      "default": "Choose the right plan for your team's support needs."
+    },
+    "billingPeriod": {
+      "type": "string",
+      "default": "month"
+    },
+    "plans": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Starter",
+          "price": "19",
+          "period": "month",
+          "description": "Perfect for small teams getting started.",
+          "features": [
+            "Up to 3 team members",
+            "Basic ticket management",
+            "Email support",
+            "Basic reporting"
+          ],
+          "buttonText": "Get Started",
+          "buttonUrl": "#",
+          "popular": false
+        },
+        {
+          "name": "Professional",
+          "price": "49",
+          "period": "month",
+          "description": "Everything growing support teams need.",
+          "features": [
+            "Up to 10 team members",
+            "Advanced ticket management",
+            "Priority support",
+            "Advanced reporting",
+            "Team collaboration"
+          ],
+          "buttonText": "Start Free Trial",
+          "buttonUrl": "#",
+          "popular": true
+        },
+        {
+          "name": "Enterprise",
+          "price": "99",
+          "period": "month",
+          "description": "Advanced support for larger organizations.",
+          "features": [
+            "Unlimited team members",
+            "Custom workflows",
+            "Dedicated support",
+            "Advanced analytics",
+            "Custom integrations"
+          ],
+          "buttonText": "Contact Sales",
+          "buttonUrl": "#",
+          "popular": false
+        }
+      ]
+    }
+  },
+  "editorScript": "file:../../index.js",
+  "style": "file:../../style-index.css",
+  "editorStyle": "file:../../style-index.css"
+}

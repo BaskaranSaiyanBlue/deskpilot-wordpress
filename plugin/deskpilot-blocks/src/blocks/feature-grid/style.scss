@@ -1,0 +1,514 @@
+
+.deskpilot-feature-grid {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 24px;
+
+    &__header {
+        max-width: 700px;
+        margin: 0 auto 48px;
+        text-align: center;
+
+        h2 {
+            color: #171B35;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #697086;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(var(--deskpilot-columns, 3), minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+.deskpilot-feature-card {
+    background: #ffffff;
+    border: 1px solid #E9EAF2;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(23, 27, 53, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(23, 27, 53, 0.10);
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        margin-bottom: 22px;
+        border-radius: 14px;
+        background: #F0EEFF;
+        color: #6558E8;
+        font-size: 27px;
+    }
+
+    h3 {
+        color: #171B35;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: #697086;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .deskpilot-feature-grid__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .deskpilot-feature-grid {
+        padding: 30px 16px;
+    }
+
+    .deskpilot-feature-grid__items {
+        grid-template-columns: 1fr;
+    }
+
+    .deskpilot-feature-card {
+        padding: 24px;
+    }
+}
+
+
+.deskpilot-feature-grid__actions {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.deskpilot-feature-card {
+    min-width: 0;
+
+    h3 {
+        line-height: 1.4;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.editor-styles-wrapper .deskpilot-feature-grid {
+    width: 100%;
+}
+
+
+/* DeskPilot Stats Block */
+
+.deskpilot-stats {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 24px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #F0EEFF 0%, #F8F7FF 100%);
+
+    &__header {
+        max-width: 700px;
+        margin: 0 auto 44px;
+        text-align: center;
+
+        h2 {
+            color: #171B35;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: #697086;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(var(--deskpilot-stat-columns, 4), minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    &__actions {
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
+.deskpilot-stat-card {
+    min-width: 0;
+    padding: 32px 20px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF2;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(23, 27, 53, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(23, 27, 53, 0.10);
+    }
+
+    &__number {
+        color: #6558E8;
+        font-size: clamp(32px, 4vw, 46px);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        color: #697086;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .deskpilot-stats__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .deskpilot-stats {
+        padding: 40px 16px;
+    }
+
+    .deskpilot-stats__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deskpilot-stat-card {
+        padding: 26px 18px;
+    }
+}
+
+
+/* DeskPilot Testimonials Block */
+
+.deskpilot-testimonials {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 24px;
+    background: #F7F6FF;
+    border-radius: 24px;
+
+    &__header {
+        max-width: 700px;
+        margin: 0 auto 44px;
+        text-align: center;
+
+        h2 {
+            color: #171B35;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: #697086;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(var(--deskpilot-testimonial-columns, 3), minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    &__actions {
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
+.deskpilot-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF2;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(23, 27, 53, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(23, 27, 53, 0.10);
+    }
+
+    &__stars {
+        color: #F5A623;
+        font-size: 19px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+
+        span {
+            color: #D8D9E2;
+        }
+    }
+
+    &__quote {
+        flex: 1;
+        color: #50566D;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 28px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding-top: 20px;
+        border-top: 1px solid #EEEEF4;
+
+        strong {
+            display: block;
+            color: #171B35;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        span {
+            display: block;
+            margin-top: 4px;
+            color: #8A8FA1;
+            font-size: 12px;
+        }
+    }
+
+    &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #F0EEFF;
+        color: #6558E8;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .deskpilot-testimonials__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .deskpilot-testimonials {
+        padding: 40px 16px;
+    }
+
+    .deskpilot-testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deskpilot-testimonial-card {
+        padding: 24px;
+    }
+}
+
+
+/* DeskPilot Pricing Block */
+
+.deskpilot-pricing {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 60px 24px;
+
+    &__header {
+        max-width: 700px;
+        margin: 0 auto 48px;
+        text-align: center;
+
+        h2 {
+            color: #171B35;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: #697086;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    &__actions {
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
+.deskpilot-pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 36px 30px;
+    background: #FFFFFF;
+    border: 1px solid #E9EAF2;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(23, 27, 53, 0.05);
+
+    h3 {
+        color: #171B35;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 12px;
+    }
+
+    &__description {
+        color: #697086;
+        font-size: 14px;
+        line-height: 1.7;
+        min-height: 48px;
+    }
+
+    &__price {
+        color: #171B35;
+        font-size: 48px;
+        font-weight: 800;
+        margin: 20px 0 26px;
+
+        span {
+            font-size: 22px;
+            vertical-align: top;
+        }
+
+        small {
+            color: #8A8FA1;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    ul {
+        flex: 1;
+        list-style: none;
+        margin: 0 0 30px;
+        padding: 0;
+    }
+
+    li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        color: #50566D;
+        font-size: 14px;
+        line-height: 1.5;
+
+        span {
+            color: #19B98A;
+            font-weight: 700;
+        }
+    }
+
+    &__button,
+    .components-button {
+        display: block;
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__button {
+        background: #F0EEFF;
+        color: #6558E8;
+        width: auto !important;
+        &:hover {
+            background: #6558E8;
+            color: #FFFFFF;
+        }
+    }
+
+    &.is-popular {
+        border: 2px solid #6558E8;
+        box-shadow: 0 18px 45px rgba(101, 88, 232, 0.12);
+        transform: translateY(-10px);
+    }
+
+    &__badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 7px 18px;
+        border-radius: 30px;
+        background: #6558E8;
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 900px) {
+    .deskpilot-pricing__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .deskpilot-pricing-card.is-popular {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .deskpilot-pricing {
+        padding: 40px 16px;
+    }
+
+    .deskpilot-pricing__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deskpilot-pricing-card {
+        padding: 30px 24px;
+    }
+}

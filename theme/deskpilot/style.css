@@ -1,0 +1,134 @@
+/*
+Theme Name: DeskPilot
+Theme URI: https://example.com/deskpilot
+Author: DeskPilot
+Description: A modern custom WordPress block theme for a SaaS website.
+Version: 1.0.0
+Requires at least: 6.6
+Tested up to: 6.9
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+Text Domain: deskpilot
+Tags: full-site-editing, block-patterns, custom-colors, custom-logo
+*/
+
+
+/* DeskPilot Global Styles */
+
+body {
+  margin: 0;
+}
+
+.deskpilot-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeF4;
+}
+
+.deskpilot-header-inner {
+  min-height: 84px;
+  padding: 0 24px;
+}
+
+.deskpilot-logo a,
+.deskpilot-footer .wp-block-site-title a {
+  color: #6558E8;
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.deskpilot-header .wp-block-navigation a {
+  color: #171B35;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.deskpilot-header-button .wp-block-button__link {
+  background: #6558E8;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-weight: 600;
+}
+
+.deskpilot-footer {
+  background: #171B35;
+  color: #ffffff;
+  padding: 50px 24px;
+}
+
+.deskpilot-footer .wp-block-site-title a {
+  color: #ffffff;
+}
+
+.deskpilot-footer p {
+  color: #D6D8E5;
+}
+
+@media (max-width: 782px) {
+  .deskpilot-header-inner {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .deskpilot-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* DeskPilot Hero */
+
+.deskpilot-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            180deg,
+            #FAFAFF 0%,
+            #F0F1FF 55%,
+            #F8F9FF 100%
+        );
+    padding: 60px 24px 80px;
+}
+
+.deskpilot-hero .wp-block-heading {
+    text-align: center;
+}
+
+.deskpilot-hero p {
+    text-align: center;
+}
+
+.deskpilot-hero img {
+    display: block;
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    margin: 40px auto 0;
+    border-radius: 16px;
+}
+
+@media (max-width: 782px) {
+    .deskpilot-hero {
+        padding: 48px 20px;
+    }
+
+    .deskpilot-hero img {
+        margin-top: 28px;
+    }
+}
+
+
+@media (min-width: 768px) {
+	.halfway-parent {
+		padding-bottom: 150px !important;
+		margin-bottom: 150px;
+	}
+	.halfway-child{
+		position: absolute;
+		top: 60%;
+	}
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "deskpilot/feature-grid",
+  "version": "1.0.0",
+  "title": "DeskPilot Feature Grid",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "A customizable feature grid section for DeskPilot.",
+  "textdomain": "deskpilot",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Everything Your Support Team Needs"
+    },
+    "description": {
+      "type": "string",
+      "default": "Powerful tools to simplify customer support and help your team work smarter."
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "features": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "✦",
+          "title": "Smart Ticket Management",
+          "description": "Organize, prioritize, and manage all your customer support tickets in one place."
+        },
+        {
+          "icon": "⚡",
+          "title": "Fast Responses",
+          "description": "Help your support team resolve customer issues faster and more efficiently."
+        },
+        {
+          "icon": "◈",
+          "title": "Team Collaboration",
+          "description": "Bring your team together with seamless collaboration and shared workflows."
+        },
+        {
+          "icon": "★",
+          "title": "Powerful Analytics",
+          "description": "Track performance and gain insights into your customer support operations."
+        },
+        {
+          "icon": "✓",
+          "title": "Automated Workflows",
+          "description": "Reduce repetitive tasks and streamline your everyday support processes."
+        },
+        {
+          "icon": "💬",
+          "title": "Customer Communication",
+          "description": "Keep customer conversations organized and make every interaction count."
+        }
+      ]
+    }
+  },
+  "editorScript": "file:../../index.js",
+  "style": "file:../../style-index.css",
+  "editorStyle": "file:../../style-index.css"
+}
