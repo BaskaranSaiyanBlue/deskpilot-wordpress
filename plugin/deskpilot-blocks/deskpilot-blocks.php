@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: DeskPilot Blocks
- * Description: Custom Gutenberg blocks for the DeskPilot theme.
+ * Description: Custom Gutenberg blocks for the DeskPilot WordPress theme.
  * Version: 1.0.0
- * Author: DeskPilot
+ * Author: Baskaran Chandrasekar
  * Text Domain: deskpilot
  */
 
@@ -12,16 +12,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Register DeskPilot custom blocks.
+ * Register DeskPilot custom Gutenberg blocks.
  */
 function deskpilot_register_blocks() {
-    register_block_type( __DIR__ . '/build/blocks/feature-grid' );
-    register_block_type( __DIR__ . '/build/blocks/stats' );
-    register_block_type( __DIR__ . '/build/blocks/testimonials' );
-    register_block_type( __DIR__ . '/build/blocks/pricing' );
+
+    $blocks = array(
+        'feature-grid',
+        'stats',
+        'testimonials',
+        'pricing',
+    );
+
+    foreach ( $blocks as $block ) {
+        register_block_type(
+            __DIR__ . '/build/blocks/' . $block
+        );
+    }
 }
 
 add_action( 'init', 'deskpilot_register_blocks' );
+
 
 /**
  * Load styles inside the Gutenberg editor.
